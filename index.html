@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Amit Shandilya — Video Editor</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#070707;
+    color:#f5f5f5;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.5;
+}
+
+.container{
+    width:min(1100px, 90%);
+    margin:auto;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;
+    padding:22px 0;
+    background:rgba(7,7,7,.78);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.nav-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:15px;
+    letter-spacing:3px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+}
+
+.nav-links a{
+    color:#aaa;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding-top:100px;
+}
+
+.hero-small{
+    color:#aaa;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-size:12px;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-size:clamp(55px,10vw,120px);
+    line-height:.9;
+    letter-spacing:-5px;
+    font-weight:700;
+}
+
+.hero h1 span{
+    color:#777;
+}
+
+.hero p{
+    margin-top:28px;
+    color:#aaa;
+    font-size:17px;
+    max-width:520px;
+}
+
+.button{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 25px;
+    border:1px solid #555;
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+.button:hover{
+    background:white;
+    color:black;
+}
+
+section{
+    padding:120px 0;
+}
+
+.section-label{
+    color:#777;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:11px;
+    margin-bottom:18px;
+}
+
+.section-title{
+    font-size:45px;
+    margin-bottom:45px;
+    letter-spacing:-2px;
+}
+
+.featured{
+    background:#0b0b0b;
+}
+
+.video-box{
+    background:#111;
+    border:1px solid #222;
+    overflow:hidden;
+}
+
+.video-box video{
+    width:100%;
+    display:block;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    background:#111;
+}
+
+.video-info{
+    padding:25px;
+}
+
+.video-info h3{
+    font-size:22px;
+}
+
+.video-info p{
+    color:#777;
+    margin-top:6px;
+    font-size:13px;
+}
+
+.work-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.work-card{
+    background:#101010;
+    border:1px solid #222;
+    overflow:hidden;
+}
+
+.work-card video{
+    width:100%;
+    display:block;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    background:#111;
+}
+
+.work-card.vertical video{
+    aspect-ratio:9/16;
+}
+
+.work-card-info{
+    padding:20px;
+}
+
+.work-card-info h3{
+    font-size:18px;
+}
+
+.work-card-info p{
+    color:#777;
+    font-size:12px;
+    margin-top:5px;
+}
+
+.about{
+    background:#0b0b0b;
+}
+
+.about-text{
+    max-width:700px;
+    color:#aaa;
+    font-size:19px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:#222;
+    border:1px solid #222;
+}
+
+.service{
+    background:#0a0a0a;
+    padding:35px;
+}
+
+.service h3{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.service p{
+    color:#777;
+    font-size:14px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact h2{
+    font-size:clamp(45px,8vw,90px);
+    letter-spacing:-4px;
+}
+
+.contact p{
+    color:#777;
+    margin-top:20px;
+}
+
+footer{
+    padding:35px 0;
+    border-top:1px solid #222;
+    color:#555;
+    font-size:12px;
+    text-align:center;
+}
+
+@media(max-width:700px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:60px;
+        letter-spacing:-3px;
+    }
+
+    section{
+        padding:80px 0;
+    }
+
+    .section-title{
+        font-size:36px;
+    }
+
+    .work-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .about-text{
+        font-size:16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container nav-inner">
+<div class="logo">AS / EDIT</div>
+
+<div class="nav-links">
+<a href="#work">Work</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+
+<section class="hero">
+<div class="container">
+
+<div class="hero-small">Video Editor / Mumbai</div>
+
+<h1>
+AMIT<br>
+<span>SHANDILYA</span>
+</h1>
+
+<p>
+Wedding films, event stories and creative reels —
+edited with a cinematic approach.
+</p>
+
+<a href="#work" class="button">VIEW MY WORK ↓</a>
+
+</div>
+</section>
+
+
+<section class="featured" id="work">
+<div class="container">
+
+<div class="section-label">01 / Featured Work</div>
+
+<div class="section-title">Selected Film</div>
+
+<div class="video-box">
+
+<video controls playsinline preload="metadata">
+<source src="videos/wedding-best.mp4" type="video/mp4">
+Your browser does not support video.
+</video>
+
+<div class="video-info">
+<h3>Wedding Teaser</h3>
+<p>Featured Edit · 51 Seconds</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section>
+<div class="container">
+
+<div class="section-label">02 / Selected Work</div>
+
+<div class="section-title">More Projects</div>
+
+<div class="work-grid">
+
+
+<div class="work-card">
+<video controls playsinline preload="metadata">
+<source src="videos/wedding-teaser-1.mp4" type="video/mp4">
+</video>
+
+<div class="work-card-info">
+<h3>Wedding Teaser</h3>
+<p>Cinematic Wedding Film · 1:39</p>
+</div>
+</div>
+
+
+<div class="work-card vertical">
+<video controls playsinline preload="metadata">
+<source src="videos/couple-reel.mp4" type="video/mp4">
+</video>
+
+<div class="work-card-info">
+<h3>Couple Reel</h3>
+<p>Cinematic Couple Reel · 26 Seconds</p>
+</div>
+</div>
+
+
+<div class="work-card vertical">
+<video controls playsinline preload="metadata">
+<source src="videos/navratri-reel.mp4" type="video/mp4">
+</video>
+
+<div class="work-card-info">
+<h3>Navratri Reel</h3>
+<p>Creative / Fashion Reel · 18 Seconds</p>
+</div>
+</div>
+
+
+<div class="work-card">
+<video controls playsinline preload="metadata">
+<source src="videos/wedding-teaser-2.mp4" type="video/mp4">
+</video>
+
+<div class="work-card-info">
+<h3>Wedding Teaser</h3>
+<p>Cinematic Wedding Edit · 51 Seconds</p>
+</div>
+</div>
+
+
+<div class="work-card vertical">
+<video controls playsinline preload="metadata">
+<source src="videos/birthday-reel.mp4" type="video/mp4">
+</video>
+
+<div class="work-card-info">
+<h3>Birthday Reel</h3>
+<p>Event Reel · 54 Seconds</p>
+</div>
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<section class="about" id="about">
+<div class="container">
+
+<div class="section-label">03 / About</div>
+
+<div class="section-title">Behind the Edit</div>
+
+<div class="about-text">
+I'm Amit Shandilya, a video editor focused on creating
+cinematic wedding films, event videos and creative reels.
+I enjoy turning real moments into visually engaging stories
+through pacing, music, colour and motion.
+</div>
+
+</div>
+</section>
+
+
+<section id="services">
+<div class="container">
+
+<div class="section-label">04 / Services</div>
+
+<div class="section-title">What I Edit</div>
+
+<div class="services">
+
+<div class="service">
+<h3>Wedding Films</h3>
+<p>Wedding teasers, highlights and cinematic edits.</p>
+</div>
+
+<div class="service">
+<h3>Event Reels</h3>
+<p>Birthday and event-based short-form videos.</p>
+</div>
+
+<div class="service">
+<h3>Creative Reels</h3>
+<p>Fashion, couple and social media content.</p>
+</div>
+
+<div class="service">
+<h3>Social Content</h3>
+<p>Short-form edits designed for Instagram and digital platforms.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section class="contact" id="contact">
+<div class="container">
+
+<div class="section-label">05 / Contact</div>
+
+<h2>LET'S WORK<br>TOGETHER.</h2>
+
+<p>Have a project in mind? Get in touch.</p>
+
+<a href="mailto:YOUR-EMAIL@example.com" class="button">
+EMAIL ME
+</a>
+
+</div>
+</section>
+
+
+<footer>
+<div class="container">
+© 2026 Amit Shandilya · Video Editor
+</div>
+</footer>
+
+</body>
+</html>
