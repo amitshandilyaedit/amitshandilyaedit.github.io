@@ -146,12 +146,14 @@ section{
     overflow:hidden;
 }
 
-.video-box video{
+.video-box video,
+.video-box iframe{
     width:100%;
     display:block;
     aspect-ratio:16/9;
     object-fit:cover;
     background:#111;
+    border:0;
 }
 
 .video-info{
@@ -341,10 +343,12 @@ edited with a cinematic approach.
 
 <div class="video-box">
 
-<video controls playsinline preload="metadata">
-<source src="videos/wedding-best.mp4" type="video/mp4">
-Your browser does not support video.
-</video>
+<iframe
+    src="https://www.youtube.com/embed/XVtQ9Turwh0"
+    title="Wedding Teaser | Amit Shandilya"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+</iframe>
 
 <div class="video-info">
 <h3>Wedding Teaser</h3>
