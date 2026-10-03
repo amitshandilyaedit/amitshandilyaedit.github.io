@@ -7,6 +7,7 @@
 <title>Amit Shandilya — Video Editor</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -25,9 +26,12 @@ body{
 }
 
 .container{
-    width:min(1100px, 90%);
+    width:min(1100px,90%);
     margin:auto;
 }
+
+
+/* NAVIGATION */
 
 nav{
     position:fixed;
@@ -67,6 +71,9 @@ nav{
 .nav-links a:hover{
     color:white;
 }
+
+
+/* HERO */
 
 .hero{
     min-height:100vh;
@@ -118,6 +125,9 @@ nav{
     color:black;
 }
 
+
+/* SECTIONS */
+
 section{
     padding:120px 0;
 }
@@ -136,6 +146,9 @@ section{
     letter-spacing:-2px;
 }
 
+
+/* FEATURED */
+
 .featured{
     background:#0b0b0b;
 }
@@ -146,14 +159,12 @@ section{
     overflow:hidden;
 }
 
-.video-box video,
 .video-box iframe{
     width:100%;
     display:block;
     aspect-ratio:16/9;
-    object-fit:cover;
-    background:#111;
     border:0;
+    background:#111;
 }
 
 .video-info{
@@ -170,6 +181,9 @@ section{
     font-size:13px;
 }
 
+
+/* SELECTED WORK */
+
 .work-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -182,16 +196,12 @@ section{
     overflow:hidden;
 }
 
-.work-card video{
+.work-card iframe{
     width:100%;
     display:block;
     aspect-ratio:16/9;
-    object-fit:cover;
+    border:0;
     background:#111;
-}
-
-.work-card.vertical video{
-    aspect-ratio:9/16;
 }
 
 .work-card-info{
@@ -208,6 +218,9 @@ section{
     margin-top:5px;
 }
 
+
+/* ABOUT */
+
 .about{
     background:#0b0b0b;
 }
@@ -217,6 +230,9 @@ section{
     color:#aaa;
     font-size:19px;
 }
+
+
+/* SERVICES */
 
 .services{
     display:grid;
@@ -241,6 +257,9 @@ section{
     font-size:14px;
 }
 
+
+/* CONTACT */
+
 .contact{
     text-align:center;
 }
@@ -255,6 +274,9 @@ section{
     margin-top:20px;
 }
 
+
+/* FOOTER */
+
 footer{
     padding:35px 0;
     border-top:1px solid #222;
@@ -262,6 +284,9 @@ footer{
     font-size:12px;
     text-align:center;
 }
+
+
+/* MOBILE */
 
 @media(max-width:700px){
 
@@ -293,30 +318,50 @@ footer{
     .about-text{
         font-size:16px;
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- NAVIGATION -->
+
 <nav>
+
 <div class="container nav-inner">
-<div class="logo">AS / EDIT</div>
+
+<div class="logo">
+AS / EDIT
+</div>
 
 <div class="nav-links">
+
 <a href="#work">Work</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
+
 </div>
+
 </div>
+
 </nav>
 
 
+
+<!-- HERO -->
+
 <section class="hero">
+
 <div class="container">
 
-<div class="hero-small">Video Editor / Mumbai</div>
+<div class="hero-small">
+Video Editor / Mumbai
+</div>
 
 <h1>
 AMIT<br>
@@ -328,188 +373,373 @@ Wedding films, event stories and creative reels —
 edited with a cinematic approach.
 </p>
 
-<a href="#work" class="button">VIEW MY WORK ↓</a>
+<a href="#work" class="button">
+VIEW MY WORK ↓
+</a>
 
 </div>
+
 </section>
 
 
+
+<!-- FEATURED WORK -->
+
 <section class="featured" id="work">
+
 <div class="container">
 
-<div class="section-label">01 / Featured Work</div>
+<div class="section-label">
+01 / Featured Work
+</div>
 
-<div class="section-title">Selected Film</div>
+<div class="section-title">
+Selected Film
+</div>
+
 
 <div class="video-box">
 
 <iframe
-    src="https://www.youtube.com/embed/XVtQ9Turwh0"
-    title="Wedding Teaser | Amit Shandilya"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
+src="https://www.youtube.com/embed/XVtQ9Turwh0"
+title="Wedding Teaser | Amit Shandilya"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
 </iframe>
 
+
 <div class="video-info">
-<h3>Wedding Teaser</h3>
-<p>Featured Edit · 51 Seconds</p>
-</div>
+
+<h3>
+Wedding Teaser
+</h3>
+
+<p>
+Featured Edit · Best Work
+</p>
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
 
+
+<!-- SELECTED WORK -->
+
 <section>
+
 <div class="container">
 
-<div class="section-label">02 / Selected Work</div>
+<div class="section-label">
+02 / Selected Work
+</div>
 
-<div class="section-title">More Projects</div>
+<div class="section-title">
+More Projects
+</div>
+
 
 <div class="work-grid">
 
 
-<div class="work-card">
-<video controls playsinline preload="metadata">
-<source src="videos/wedding-teaser-1.mp4" type="video/mp4">
-</video>
 
-<div class="work-card-info">
-<h3>Wedding Teaser</h3>
-<p>Cinematic Wedding Film · 1:39</p>
-</div>
-</div>
-
-
-<div class="work-card vertical">
-<video controls playsinline preload="metadata">
-<source src="videos/couple-reel.mp4" type="video/mp4">
-</video>
-
-<div class="work-card-info">
-<h3>Couple Reel</h3>
-<p>Cinematic Couple Reel · 26 Seconds</p>
-</div>
-</div>
-
-
-<div class="work-card vertical">
-<video controls playsinline preload="metadata">
-<source src="videos/navratri-reel.mp4" type="video/mp4">
-</video>
-
-<div class="work-card-info">
-<h3>Navratri Reel</h3>
-<p>Creative / Fashion Reel · 18 Seconds</p>
-</div>
-</div>
-
+<!-- VIDEO 2 -->
 
 <div class="work-card">
-<video controls playsinline preload="metadata">
-<source src="videos/wedding-teaser-2.mp4" type="video/mp4">
-</video>
+
+<iframe
+src="https://www.youtube.com/embed/4Z4Y65cMsLw"
+title="Birthday Teaser | Amit Shandilya"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
 
 <div class="work-card-info">
-<h3>Wedding Teaser</h3>
-<p>Cinematic Wedding Edit · 51 Seconds</p>
+
+<h3>
+Birthday Teaser
+</h3>
+
+<p>
+Event Film
+</p>
+
 </div>
+
 </div>
 
 
-<div class="work-card vertical">
-<video controls playsinline preload="metadata">
-<source src="videos/birthday-reel.mp4" type="video/mp4">
-</video>
+
+<!-- VIDEO 3 -->
+
+<div class="work-card">
+
+<iframe
+src="https://www.youtube.com/embed/aH8Qvh7jOEo"
+title="Birthday Highlight | Amit Shandilya"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
 
 <div class="work-card-info">
-<h3>Birthday Reel</h3>
-<p>Event Reel · 54 Seconds</p>
+
+<h3>
+Birthday Highlight
+</h3>
+
+<p>
+Event Edit
+</p>
+
 </div>
+
+</div>
+
+
+
+<!-- VIDEO 4 -->
+
+<div class="work-card">
+
+<iframe
+src="https://www.youtube.com/embed/fSSAAT5fKo0"
+title="Wedding Teaser | Amit Shandilya"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+<div class="work-card-info">
+
+<h3>
+Wedding Teaser
+</h3>
+
+<p>
+Cinematic Wedding Edit
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- VIDEO 5 -->
+
+<div class="work-card">
+
+<iframe
+src="https://www.youtube.com/embed/L3ONubrsV1E"
+title="Wedding Teaser | Amit Shandilya"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+<div class="work-card-info">
+
+<h3>
+Wedding Teaser
+</h3>
+
+<p>
+Cinematic Wedding Edit
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- VIDEO 6 -->
+
+<div class="work-card">
+
+<iframe
+src="https://www.youtube.com/embed/rcUpsHF0fRI"
+title="Wedding Highlight | Amit Shandilya"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+<div class="work-card-info">
+
+<h3>
+Wedding Highlight
+</h3>
+
+<p>
+Cinematic Wedding Film
+</p>
+
+</div>
+
 </div>
 
 
 </div>
+
 </div>
+
 </section>
 
 
+
+<!-- ABOUT -->
+
 <section class="about" id="about">
+
 <div class="container">
 
-<div class="section-label">03 / About</div>
+<div class="section-label">
+03 / About
+</div>
 
-<div class="section-title">Behind the Edit</div>
+<div class="section-title">
+Behind the Edit
+</div>
 
 <div class="about-text">
+
 I'm Amit Shandilya, a video editor focused on creating
 cinematic wedding films, event videos and creative reels.
 I enjoy turning real moments into visually engaging stories
 through pacing, music, colour and motion.
+
 </div>
 
 </div>
+
 </section>
 
 
+
+<!-- SERVICES -->
+
 <section id="services">
+
 <div class="container">
 
-<div class="section-label">04 / Services</div>
+<div class="section-label">
+04 / Services
+</div>
 
-<div class="section-title">What I Edit</div>
+<div class="section-title">
+What I Edit
+</div>
+
 
 <div class="services">
 
-<div class="service">
-<h3>Wedding Films</h3>
-<p>Wedding teasers, highlights and cinematic edits.</p>
-</div>
 
 <div class="service">
-<h3>Event Reels</h3>
-<p>Birthday and event-based short-form videos.</p>
+
+<h3>
+Wedding Films
+</h3>
+
+<p>
+Wedding teasers, highlights and cinematic edits.
+</p>
+
 </div>
+
+
 
 <div class="service">
-<h3>Creative Reels</h3>
-<p>Fashion, couple and social media content.</p>
+
+<h3>
+Event Reels
+</h3>
+
+<p>
+Birthday and event-based short-form videos.
+</p>
+
 </div>
+
+
 
 <div class="service">
-<h3>Social Content</h3>
-<p>Short-form edits designed for Instagram and digital platforms.</p>
+
+<h3>
+Creative Reels
+</h3>
+
+<p>
+Fashion, couple and social media content.
+</p>
+
+</div>
+
+
+
+<div class="service">
+
+<h3>
+Social Content
+</h3>
+
+<p>
+Short-form edits designed for Instagram and digital platforms.
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
+
+<!-- CONTACT -->
+
 <section class="contact" id="contact">
+
 <div class="container">
 
-<div class="section-label">05 / Contact</div>
+<div class="section-label">
+05 / Contact
+</div>
 
-<h2>LET'S WORK<br>TOGETHER.</h2>
+<h2>
+LET'S WORK<br>
+TOGETHER.
+</h2>
 
-<p>Have a project in mind? Get in touch.</p>
+<p>
+Have a project in mind? Get in touch.
+</p>
 
 <a href="mailto:YOUR-EMAIL@example.com" class="button">
 EMAIL ME
 </a>
 
 </div>
+
 </section>
 
 
+
+<!-- FOOTER -->
+
 <footer>
+
 <div class="container">
+
 © 2026 Amit Shandilya · Video Editor
+
 </div>
+
 </footer>
+
 
 </body>
 </html>
