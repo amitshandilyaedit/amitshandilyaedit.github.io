@@ -7,7 +7,6 @@
 <title>Amit Shandilya — Video Editor</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -21,7 +20,7 @@ html{
 body{
     background:#070707;
     color:#f5f5f5;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     line-height:1.5;
 }
 
@@ -29,7 +28,6 @@ body{
     width:min(1100px,90%);
     margin:auto;
 }
-
 
 /* NAVIGATION */
 
@@ -66,12 +64,12 @@ nav{
     color:#aaa;
     text-decoration:none;
     font-size:13px;
+    transition:.3s;
 }
 
 .nav-links a:hover{
     color:white;
 }
-
 
 /* HERO */
 
@@ -125,7 +123,6 @@ nav{
     color:black;
 }
 
-
 /* SECTIONS */
 
 section{
@@ -145,7 +142,6 @@ section{
     margin-bottom:45px;
     letter-spacing:-2px;
 }
-
 
 /* FEATURED */
 
@@ -181,8 +177,7 @@ section{
     font-size:13px;
 }
 
-
-/* SELECTED WORK */
+/* WORK */
 
 .work-grid{
     display:grid;
@@ -218,7 +213,6 @@ section{
     margin-top:5px;
 }
 
-
 /* ABOUT */
 
 .about{
@@ -230,7 +224,6 @@ section{
     color:#aaa;
     font-size:19px;
 }
-
 
 /* SERVICES */
 
@@ -257,11 +250,11 @@ section{
     font-size:14px;
 }
 
-
 /* CONTACT */
 
 .contact{
     text-align:center;
+    background:#080808;
 }
 
 .contact h2{
@@ -269,11 +262,106 @@ section{
     letter-spacing:-4px;
 }
 
-.contact p{
+.contact-intro{
     color:#777;
     margin-top:20px;
+    margin-bottom:50px;
 }
 
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-top:55px;
+    text-align:left;
+}
+
+.contact-card{
+    background:#101010;
+    border:1px solid #222;
+    padding:30px;
+    transition:.3s;
+}
+
+.contact-card:hover{
+    border-color:#444;
+    transform:translateY(-3px);
+}
+
+.contact-label{
+    color:#666;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:10px;
+    margin-bottom:12px;
+}
+
+.contact-card h3{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.contact-card a{
+    color:#aaa;
+    text-decoration:none;
+    font-size:14px;
+    word-break:break-word;
+}
+
+.contact-card a:hover{
+    color:white;
+}
+
+/* WHATSAPP QR */
+
+.qr-card{
+    grid-column:1 / -1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:45px;
+    text-align:left;
+}
+
+.qr-image{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    background:white;
+    padding:10px;
+    border-radius:4px;
+}
+
+.qr-content{
+    max-width:450px;
+}
+
+.qr-content h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.qr-content p{
+    color:#777;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.whatsapp-button{
+    display:inline-block;
+    padding:13px 22px;
+    border:1px solid #555;
+    color:white;
+    text-decoration:none;
+    font-size:12px;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+.whatsapp-button:hover{
+    background:white;
+    color:black;
+}
 
 /* FOOTER */
 
@@ -284,7 +372,6 @@ footer{
     font-size:12px;
     text-align:center;
 }
-
 
 /* MOBILE */
 
@@ -319,38 +406,48 @@ footer{
         font-size:16px;
     }
 
-}
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
 
+    .qr-card{
+        grid-column:auto;
+        flex-direction:column;
+        text-align:center;
+        gap:25px;
+    }
+
+    .qr-image{
+        width:210px;
+        height:210px;
+    }
+
+    .qr-content{
+        max-width:100%;
+    }
+
+}
 </style>
 </head>
 
-
 <body>
-
 
 <!-- NAVIGATION -->
 
 <nav>
-
 <div class="container nav-inner">
 
-<div class="logo">
-AS / EDIT
-</div>
+<div class="logo">AS / EDIT</div>
 
 <div class="nav-links">
-
 <a href="#work">Work</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
-
 </div>
 
 </div>
-
 </nav>
-
 
 
 <!-- HERO -->
@@ -369,8 +466,7 @@ AMIT<br>
 </h1>
 
 <p>
-Wedding films, event stories and creative reels —
-edited with a cinematic approach.
+Wedding films, event stories and creative reels — edited with a cinematic approach.
 </p>
 
 <a href="#work" class="button">
@@ -380,7 +476,6 @@ VIEW MY WORK ↓
 </div>
 
 </section>
-
 
 
 <!-- FEATURED WORK -->
@@ -397,7 +492,6 @@ VIEW MY WORK ↓
 Selected Film
 </div>
 
-
 <div class="video-box">
 
 <iframe
@@ -406,7 +500,6 @@ title="Wedding Teaser | Amit Shandilya"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen>
 </iframe>
-
 
 <div class="video-info">
 
@@ -427,7 +520,6 @@ Featured Edit · Best Work
 </section>
 
 
-
 <!-- SELECTED WORK -->
 
 <section>
@@ -442,12 +534,8 @@ Featured Edit · Best Work
 More Projects
 </div>
 
-
 <div class="work-grid">
 
-
-
-<!-- VIDEO 2 -->
 
 <div class="work-card">
 
@@ -459,22 +547,12 @@ allowfullscreen>
 </iframe>
 
 <div class="work-card-info">
-
-<h3>
-Birthday Teaser
-</h3>
-
-<p>
-Event Film
-</p>
-
+<h3>Birthday Teaser</h3>
+<p>Event Film</p>
 </div>
 
 </div>
 
-
-
-<!-- VIDEO 3 -->
 
 <div class="work-card">
 
@@ -486,22 +564,12 @@ allowfullscreen>
 </iframe>
 
 <div class="work-card-info">
-
-<h3>
-Birthday Highlight
-</h3>
-
-<p>
-Event Edit
-</p>
-
+<h3>Birthday Highlight</h3>
+<p>Event Edit</p>
 </div>
 
 </div>
 
-
-
-<!-- VIDEO 4 -->
 
 <div class="work-card">
 
@@ -513,22 +581,12 @@ allowfullscreen>
 </iframe>
 
 <div class="work-card-info">
-
-<h3>
-Wedding Teaser
-</h3>
-
-<p>
-Cinematic Wedding Edit
-</p>
-
+<h3>Wedding Teaser</h3>
+<p>Cinematic Wedding Edit</p>
 </div>
 
 </div>
 
-
-
-<!-- VIDEO 5 -->
 
 <div class="work-card">
 
@@ -540,22 +598,12 @@ allowfullscreen>
 </iframe>
 
 <div class="work-card-info">
-
-<h3>
-Wedding Teaser
-</h3>
-
-<p>
-Cinematic Wedding Edit
-</p>
-
+<h3>Wedding Teaser</h3>
+<p>Cinematic Wedding Edit</p>
 </div>
 
 </div>
 
-
-
-<!-- VIDEO 6 -->
 
 <div class="work-card">
 
@@ -567,15 +615,8 @@ allowfullscreen>
 </iframe>
 
 <div class="work-card-info">
-
-<h3>
-Wedding Highlight
-</h3>
-
-<p>
-Cinematic Wedding Film
-</p>
-
+<h3>Wedding Highlight</h3>
+<p>Cinematic Wedding Film</p>
 </div>
 
 </div>
@@ -586,7 +627,6 @@ Cinematic Wedding Film
 </div>
 
 </section>
-
 
 
 <!-- ABOUT -->
@@ -605,17 +645,13 @@ Behind the Edit
 
 <div class="about-text">
 
-I'm Amit Shandilya, a video editor focused on creating
-cinematic wedding films, event videos and creative reels.
-I enjoy turning real moments into visually engaging stories
-through pacing, music, colour and motion.
+I'm Amit Shandilya, a video editor focused on creating cinematic wedding films, event videos and creative reels. I enjoy turning real moments into visually engaging stories through pacing, music, colour and motion.
 
 </div>
 
 </div>
 
 </section>
-
 
 
 <!-- SERVICES -->
@@ -631,7 +667,6 @@ through pacing, music, colour and motion.
 <div class="section-title">
 What I Edit
 </div>
-
 
 <div class="services">
 
@@ -649,7 +684,6 @@ Wedding teasers, highlights and cinematic edits.
 </div>
 
 
-
 <div class="service">
 
 <h3>
@@ -663,7 +697,6 @@ Birthday and event-based short-form videos.
 </div>
 
 
-
 <div class="service">
 
 <h3>
@@ -675,7 +708,6 @@ Fashion, couple and social media content.
 </p>
 
 </div>
-
 
 
 <div class="service">
@@ -698,7 +730,6 @@ Short-form edits designed for Instagram and digital platforms.
 </section>
 
 
-
 <!-- CONTACT -->
 
 <section class="contact" id="contact">
@@ -714,18 +745,100 @@ LET'S WORK<br>
 TOGETHER.
 </h2>
 
-<p>
+<p class="contact-intro">
 Have a project in mind? Get in touch.
 </p>
 
-<a href="mailto:YOUR-EMAIL@example.com" class="button">
-EMAIL ME
+
+<div class="contact-grid">
+
+
+<!-- EMAIL -->
+
+<div class="contact-card">
+
+<div class="contact-label">
+Email
+</div>
+
+<h3>
+Let's Talk
+</h3>
+
+<a href="mailto:amitpathakm2001@gmail.com">
+amitpathakm2001@gmail.com
 </a>
 
 </div>
 
-</section>
 
+<!-- INSTAGRAM -->
+
+<div class="contact-card">
+
+<div class="contact-label">
+Instagram
+</div>
+
+<h3>
+My Work
+</h3>
+
+<a
+href="https://www.instagram.com/awaaraframes__/"
+target="_blank"
+rel="noopener noreferrer">
+
+@awaaraframes__
+
+</a>
+
+</div>
+
+
+<!-- WHATSAPP QR -->
+
+<div class="contact-card qr-card">
+
+<img
+src="IMG_7684.jpeg"
+alt="Amit Shandilya WhatsApp QR Code"
+class="qr-image">
+
+<div class="qr-content">
+
+<div class="contact-label">
+WhatsApp
+</div>
+
+<h3>
+Let's Connect
+</h3>
+
+<p>
+Scan the QR code to save my WhatsApp contact or message me directly for project enquiries.
+</p>
+
+<a
+href="https://wa.me/qr/SLPHT242DMDCG1"
+target="_blank"
+rel="noopener noreferrer"
+class="whatsapp-button">
+
+MESSAGE ON WHATSAPP →
+
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
 
 
 <!-- FOOTER -->
